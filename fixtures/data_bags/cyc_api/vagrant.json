@@ -1,0 +1,16 @@
+{
+  "id": "vagrant",
+  "client": {
+    "servers": [
+      "localhost:18800",
+      "localhost:18801",
+      "localhost:18802",
+      "localhost:18803",
+      "localhost:18804",
+      "localhost:18805"
+    ]
+  },
+  "server": {
+    "mysql_host": "localhost"
+  }
+}

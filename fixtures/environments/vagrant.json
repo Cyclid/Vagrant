@@ -1,0 +1,9 @@
+{
+  "name": "vagrant",
+  "default_attributes": {
+
+  },
+  "json_class": "Chef::Environment",
+  "description": "Vagrant environment for Cyclid box",
+  "chef_type": "environment"
+}
