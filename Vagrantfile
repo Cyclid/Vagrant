@@ -31,4 +31,7 @@ Vagrant.configure(2) do |config|
                      'recipe[cyc_builder]',
                      'recipe[vagrant::finalize]']
   end
+
+  # Run the script to produce the client configuration file
+  config.vm.provision 'shell', inline: '/var/lib/cyclid/client-config.sh'
 end
