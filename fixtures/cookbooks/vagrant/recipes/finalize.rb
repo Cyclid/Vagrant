@@ -21,3 +21,14 @@ end
 execute 'apt-get-autoremove' do
   command 'apt-get autoremove -y'
 end
+
+# Extract the Admin HMAC secret that was created by cyclid-db-init and generate
+# Cyclid client configuration using it.
+cookbook_file '/var/lib/cyclid/client-config.sh' do
+  source 'client-config.sh'
+  mode 0755
+end
+
+execute 'generate-config' do
+  command '/var/lib/cyclid/client-config.sh'
+end
