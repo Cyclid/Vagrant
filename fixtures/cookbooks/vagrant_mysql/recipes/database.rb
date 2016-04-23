@@ -18,6 +18,6 @@ execute 'create-cyclid-database' do
 end
 
 execute 'cyclid-init-database' do
-  command 'cyclid-db-init >/tmp/cyclid-db-init.log'
+  command 'cyclid-db-init 2>/var/lib/cyclid/cyclid-db-init'
   action :nothing
 end

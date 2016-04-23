@@ -1,7 +1,12 @@
 {
   "name": "vagrant",
   "default_attributes": {
-
+    "cyc_builder": {
+      "backend": "lxc"
+    },
+    "cyc_lxc": {
+      "username": "vagrant"
+    }
   },
   "json_class": "Chef::Environment",
   "description": "Vagrant environment for Cyclid box",

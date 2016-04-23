@@ -1,0 +1,5 @@
+server: localhost
+port: 8080 
+organization: admins
+username: admin
+secret: 0f0a90a88f0e5a9610c088f5af62bfad1ff43779dd4f6d666f69dcdf59f19505
