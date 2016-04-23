@@ -2,7 +2,10 @@
 TARGET_DIR=/vagrant/config
 HMAC=$(grep 'Admin secret:' /var/lib/cyclid/cyclid-db-init | awk '{print $3}')
 
-mkdir $TARGET_DIR
+if [ ! -e $TARGET_DIR ]
+then
+  mkdir -p $TARGET_DIR
+fi
 
 echo "server: localhost
 port: 8080

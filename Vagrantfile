@@ -6,6 +6,8 @@ chef_path = ENV.fetch('CYCLID_COOKBOOK_PATH', '../chef')
 Vagrant.configure(2) do |config|
   config.vm.box = 'ubuntu/trusty64'
 
+  config.vm.hostname = 'ubuntu-trusty-cyclid'
+
   config.vm.provider 'virtualbox' do |vb|
     vb.memory = '1024'
   end

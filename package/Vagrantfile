@@ -1,5 +1,6 @@
 Vagrant.configure(2) do |config|
   config.vm.network 'forwarded_port', guest: 80, host: 8080
 
+  config.vm.provision "shell", inline: 'mkdir /var/run/mysqld && ln -s /var/run/mysql-cyclid/mysqld.sock /var/run/mysqld/mysqld.sock'
   config.vm.provision 'shell', inline: '/var/lib/cyclid/client-config.sh'
 end 
