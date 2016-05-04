@@ -4,6 +4,11 @@
 #
 # Copyright (c) 2016 Liqwyd Ltd., All Rights Reserved.
 
+# Get rid of cloud-init as it is is silly
+package 'cloud-init' do
+  action :purge
+end
+
 # Chef-zero depends on ruby-rack 1.5 which gets installed via. apt. This breaks
 # Sinatra & Unicorn because it depends on Rack 1.6, which is installed from
 # Gems
