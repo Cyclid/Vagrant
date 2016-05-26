@@ -11,6 +11,7 @@
     ]
   },
   "server": {
-    "mysql_host": "localhost"
+    "mysql_host": "localhost",
+    "mysql_socket": "/var/run/mysql-cyclid/mysqld.sock"
   }
 }
