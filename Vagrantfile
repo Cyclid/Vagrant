@@ -21,6 +21,9 @@ Vagrant.configure(2) do |config|
   # Configure with the Cyclid Chef recipes and Vagrant specific configuration
   # data
   config.vm.provision 'chef_zero' do |chef|
+    chef.channel = 'stable'
+    chef.version = '12.10.24'
+
     chef.environments_path = 'fixtures/environments'
     chef.data_bags_path = 'fixtures/data_bags'
     chef.nodes_path = 'fixtures/nodes'

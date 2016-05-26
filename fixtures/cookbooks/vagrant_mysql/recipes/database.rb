@@ -9,6 +9,10 @@
 auth_data = data_bag_item('cyc_api', 'mysql')
 creds = auth_data[node.chef_environment]
 
+# Make sure the credentials make it to the cyc_api cookbook
+node.default['cyc_api']['db_user'] = creds['username']
+node.default['cyc_api']['db_password'] = creds['password']
+
 # Create the database if it doesn't exist, and then run cyclid-db-init to
 # create the schema & initial admin user
 execute 'create-cyclid-database' do
