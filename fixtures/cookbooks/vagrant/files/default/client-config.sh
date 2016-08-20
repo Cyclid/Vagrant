@@ -8,7 +8,7 @@ then
 fi
 
 echo "server: localhost
-port: 8080
+port: 8361
 organization: admins
 username: admin
 secret: $HMAC" > ${TARGET_DIR}/vagrant

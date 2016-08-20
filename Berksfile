@@ -7,6 +7,7 @@ cookbook 'cyc_builder', path: "#{chef_path}/cookbooks/cyc_builder"
 cookbook 'cyc_nginx', path: "#{chef_path}/cookbooks/cyc_nginx"
 cookbook 'cyc_api', path: "#{chef_path}/cookbooks/cyc_api"
 cookbook 'cyc_mist', path: "#{chef_path}/cookbooks/cyc_mist"
+cookbook 'cyc_ui', path: "#{chef_path}/cookbooks/cyc_ui"
 
 cookbook 'vagrant', path: 'fixtures/cookbooks/vagrant'
 cookbook 'vagrant_mysql', path: 'fixtures/cookbooks/vagrant_mysql'
