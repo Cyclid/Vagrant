@@ -8,6 +8,9 @@ cookbook 'cyc_nginx', path: "#{chef_path}/cookbooks/cyc_nginx"
 cookbook 'cyc_api', path: "#{chef_path}/cookbooks/cyc_api"
 cookbook 'cyc_mist', path: "#{chef_path}/cookbooks/cyc_mist"
 cookbook 'cyc_ui', path: "#{chef_path}/cookbooks/cyc_ui"
+cookbook 'cyc_collectd', path: "#{chef_path}/cookbooks/cyc_collectd"
 
 cookbook 'vagrant', path: 'fixtures/cookbooks/vagrant'
 cookbook 'vagrant_mysql', path: 'fixtures/cookbooks/vagrant_mysql'
+
+cookbook 'apt-nginx', git: 'https://github.com/Cyclid/cookbook-apt-nginx.git', branch: 'vanders/update_signing_key'
