@@ -14,11 +14,16 @@ end
 # Gems
 package 'ruby-rack' do
   action :remove
-  notifies :restart, 'runit_service[unicorn]'
+  notifies :restart, 'runit_service[cyclid-api]'
+  notifies :restart, 'runit_service[cyclid-ui]'
 end
 
 # Restart Unicorn so that it loads the correct Rack Gem
-runit_service 'unicorn' do
+runit_service 'cyclid-api' do
+  action :nothing
+end
+
+runit_service 'cyclid-ui' do
   action :nothing
 end
 

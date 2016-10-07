@@ -9,10 +9,13 @@ Vagrant.configure(2) do |config|
   config.vm.hostname = 'ubuntu-trusty-cyclid'
 
   config.vm.provider 'virtualbox' do |vb|
-    vb.memory = '1024'
+    vb.memory = '2048'
   end
 
-  # Make the Cyclid API accessable from the host on port 8080
+  # Make the Cyclid API accessable from the host on port 8361
+  config.vm.network 'forwarded_port', guest: 8361, host: 8361
+
+  # Make the Cyclid UI accessable from the host on port 8080
   config.vm.network 'forwarded_port', guest: 80, host: 8080
 
   # Use Berkshelf to install the cookbook dependencies
@@ -34,6 +37,7 @@ Vagrant.configure(2) do |config|
                      'recipe[cyc_api]',
                      'recipe[vagrant_mysql::database]',
                      'recipe[cyc_builder]',
+                     'recipe[cyc_ui]',
                      'recipe[vagrant::finalize]']
   end
 
