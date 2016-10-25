@@ -1,0 +1,7 @@
+{
+  "id": "github",
+  "vagrant": {
+    "client_id": "",
+    "client_secret": ""
+  }
+}

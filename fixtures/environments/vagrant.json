@@ -6,7 +6,11 @@
     },
     "cyc_lxc": {
       "username": "vagrant"
-    }
+    },
+    "cyc_api": {
+      "install_mode": "install"
+    },
+    "gem_sources": "http://rubygems.cyclid.io"
   },
   "json_class": "Chef::Environment",
   "description": "Vagrant environment for Cyclid box",
