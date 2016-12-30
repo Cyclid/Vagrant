@@ -67,7 +67,6 @@ Vagrant.configure(2) do |config|
       chef.run_list = ['recipe[vagrant_mysql::server]',
                        'recipe[cyc_api]',
                        'recipe[vagrant_mysql::database]',
-                       #'recipe[cyc_builder]',
                        'recipe[vagrant::lxd]',
                        'recipe[cyc_ui]',
                        'recipe[vagrant::finalize]']

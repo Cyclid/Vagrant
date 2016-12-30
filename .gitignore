@@ -1,5 +1,6 @@
 Berksfile.lock
 .vagrant
-fixtures/nodes/*.json
+fixtures/nodes/vagrant-*.json
 config
 *.box
+*.log
