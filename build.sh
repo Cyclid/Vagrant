@@ -1,4 +1,6 @@
 #!/bin/bash
-vagrant destroy
-vagrant up
-vagrant package --output cyclid.box --vagrantfile package/Vagrantfile
+BOX=cyclid-xenial-lxd
+
+vagrant destroy $BOX
+vagrant up $BOX
+vagrant package $BOX --output $BOX.box --vagrantfile package/Vagrantfile
