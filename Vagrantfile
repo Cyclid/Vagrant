@@ -7,6 +7,9 @@ Vagrant.configure(2) do |config|
   # Database, two servers, containers...we need RAM
   config.vm.provider 'virtualbox' do |vb|
     vb.memory = '4096'
+
+    # Issue #3: over-ride the settings in the Xenial box
+    vb.customize [ 'modifyvm', :id, '--uartmode1', 'disconnected']
   end
 
   # Make the Cyclid API accessable from the host on port 8361
