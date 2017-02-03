@@ -15,8 +15,15 @@ creds = auth_data[node.chef_environment]
 node.default['cyc_api']['db_user'] = creds['username']
 node.default['cyc_api']['db_password'] = creds['password']
 
+mysql_version = case node['lsb']['codename']
+                when 'trusty'
+                  '5.5'
+                when 'xenial'
+                  '5.7'
+                end
+
 mysql_service 'cyclid' do
-  version '5.5'
+  version mysql_version
   initial_root_password creds['password']
   action [:create, :start]
 end
