@@ -17,7 +17,9 @@ execute 'create-cyclid-database' do
   notifies :run, 'execute[cyclid-init-database]'
 end
 
+package 'pwgen'
+
 execute 'cyclid-init-database' do
-  command 'cyclid-db-init 2>/var/lib/cyclid/cyclid-db-init'
+  command 'cyclid-db-init $(pwgen -n 64 1) cyclid 2>/var/lib/cyclid/cyclid-db-init'
   action :nothing
 end
